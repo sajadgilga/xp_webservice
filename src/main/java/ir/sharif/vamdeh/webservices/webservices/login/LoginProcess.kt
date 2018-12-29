@@ -2,7 +2,7 @@ package ir.sharif.vamdeh.webservices.webservices.login
 
 import java.io.IOException
 
-import ir.sharif.vamdeh.webservices.base.LoginType
+import ir.sharif.vamdeh.webservices.base.Constants.LoginType
 import ir.sharif.vamdeh.webservices.base.requestProcess.BaseProcess
 import ir.sharif.vamdeh.webservices.base.MyRetrofit
 import ir.sharif.vamdeh.webservices.base.WebserviceException

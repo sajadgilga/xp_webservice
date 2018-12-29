@@ -1,5 +1,6 @@
 package ir.sharif.vamdeh.webservices.base
 
+import ir.sharif.vamdeh.webservices.base.Constants.WebserviceAdresses
 import ir.sharif.vamdeh.webservices.webservices.battleEntrance.EntranceRequest
 import ir.sharif.vamdeh.webservices.webservices.battleEntrance.EntranceResponse
 import ir.sharif.vamdeh.webservices.webservices.buy.BuyRequest

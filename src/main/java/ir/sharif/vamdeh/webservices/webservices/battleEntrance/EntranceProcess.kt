@@ -1,6 +1,6 @@
 package ir.sharif.vamdeh.webservices.webservices.battleEntrance
 
-import ir.sharif.vamdeh.webservices.base.Category
+import ir.sharif.vamdeh.webservices.base.Constants.Category
 import ir.sharif.vamdeh.webservices.base.MyRetrofit
 import ir.sharif.vamdeh.webservices.base.requestProcess.BaseProcess
 

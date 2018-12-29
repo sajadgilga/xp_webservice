@@ -1,8 +1,8 @@
 package ir.sharif.vamdeh.webservices
 
 import android.content.Context
-import ir.sharif.vamdeh.webservices.base.Category
-import ir.sharif.vamdeh.webservices.base.LoginType
+import ir.sharif.vamdeh.webservices.base.Constants.Category
+import ir.sharif.vamdeh.webservices.base.Constants.LoginType
 
 import java.io.IOException
 

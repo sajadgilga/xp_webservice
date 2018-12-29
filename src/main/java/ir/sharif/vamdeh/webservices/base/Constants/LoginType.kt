@@ -1,4 +1,4 @@
-package ir.sharif.vamdeh.webservices.base
+package ir.sharif.vamdeh.webservices.base.Constants
 
 enum class LoginType(val type: String) {
     GUEST("guest"),

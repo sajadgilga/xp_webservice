@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import ir.sharif.vamdeh.webservices.pref.WebservicePrefSetting
 
-import ir.sharif.vamdeh.webservices.base.WebserviceAdresses.BASE_URL
+import ir.sharif.vamdeh.webservices.base.Constants.WebserviceAdresses.BASE_URL
 
 object MyRetrofit {
 
