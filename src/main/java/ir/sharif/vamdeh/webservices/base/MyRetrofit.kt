@@ -16,7 +16,7 @@ object MyRetrofit {
 
     private val token: String
         get() {
-            val key = WebservicePrefSetting.instanceWithoutContext!!.token
+            val key = WebservicePrefSetting.instanceWithoutContext.token
             return "token $key"
         }
 
@@ -49,7 +49,7 @@ object MyRetrofit {
     }
 
     private fun addAuthHeader(client: OkHttpClient.Builder) {
-        if (WebservicePrefSetting.instanceWithoutContext!!.isRegister) {
+        if (WebservicePrefSetting.instanceWithoutContext.isRegister) {
             client.addInterceptor { chain ->
                 val original = chain.request()
 
