@@ -17,7 +17,7 @@ object WebserviceHelper {
     fun login(context: Context, type: LoginType): LoginResponse {
         val process = LoginProcess(type)
         val response = process.process()
-        WebservicePrefSetting.getInstance(context)!!.saveToken(response.token)
+        WebservicePrefSetting.getInstance(context).saveToken(response.token)
         return response
     }
 

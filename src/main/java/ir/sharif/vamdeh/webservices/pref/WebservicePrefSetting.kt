@@ -5,17 +5,17 @@ import android.content.SharedPreferences
 
 class WebservicePrefSetting private constructor(context: Context) {
 
-    private val sharedPreferences: SharedPreferences = context.getSharedPreferences(PrefCostance.SHARED_NAME, Context.MODE_PRIVATE)
+    private val sharedPreferences: SharedPreferences = context.getSharedPreferences(PrefConstants.SHARED_NAME, Context.MODE_PRIVATE)
 
     var isRegister: Boolean
-        get() = sharedPreferences.getBoolean(PrefCostance.IS_REGISTER, false)
-        set(register) = sharedPreferences.edit().putBoolean(PrefCostance.IS_REGISTER, register).apply()
+        get() = sharedPreferences.getBoolean(PrefConstants.IS_REGISTER, false)
+        set(register) = sharedPreferences.edit().putBoolean(PrefConstants.IS_REGISTER, register).apply()
 
     val token: String
-        get() = sharedPreferences.getString(PrefCostance.SHARED_KEY, "")
+        get() = sharedPreferences.getString(PrefConstants.SHARED_KEY, "")
 
     fun saveToken(key: String) {
-        sharedPreferences.edit().putString(PrefCostance.SHARED_KEY, key).apply()
+        sharedPreferences.edit().putString(PrefConstants.SHARED_KEY, key).apply()
 
     }
 
@@ -23,19 +23,13 @@ class WebservicePrefSetting private constructor(context: Context) {
 
         private var instance: WebservicePrefSetting? = null
 
-        fun getInstance(context: Context): WebservicePrefSetting? {
-            if (instance == null) {
-                instance = WebservicePrefSetting(context)
-            }
-            return instance
+        fun getInstance(context: Context): WebservicePrefSetting {
+            return instance?:WebservicePrefSetting(context)
         }
 
-        val instanceWithoutContext: WebservicePrefSetting?
+        val instanceWithoutContext: WebservicePrefSetting
             get() {
-                if (instance == null) {
-                    throw RuntimeException("Please set context first")
-                }
-                return instance
+                return instance?:throw RuntimeException("Please set context first")
             }
     }
 }

@@ -12,7 +12,7 @@ class LoginProcess(type: LoginType) : BaseProcess() {
 
     @Throws(IOException::class, WebserviceException::class)
     override fun process(): LoginResponse {
-        val login = MyRetrofit.instance?.webserviceUrls?.login(request)
-        return send(login!!)
+        val login = MyRetrofit.webserviceUrls.login(request)
+        return send(login)
     }
 }

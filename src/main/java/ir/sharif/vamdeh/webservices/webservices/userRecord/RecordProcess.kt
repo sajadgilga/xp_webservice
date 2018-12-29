@@ -10,7 +10,7 @@ class RecordProcess: BaseProcess() {
 
     @Throws(IOException::class, WebserviceException::class)
     override fun process(): RecordResponse{
-        var record = MyRetrofit.instance?.webserviceUrls?.record()
-        return send(record!!)
+        val record = MyRetrofit.webserviceUrls.record()
+        return send(record)
     }
 }
