@@ -4,5 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 class Friend (
         @field: SerializedName("username")
-        var username: String?
+        var username: String?,
+        @field: SerializedName("avatar")
+        var avatar: Int?
 )
